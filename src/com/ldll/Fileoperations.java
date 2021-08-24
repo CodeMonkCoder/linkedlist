@@ -9,16 +9,13 @@ import java.util.Scanner;
 public class Fileoperations {
 
 	public void simplefilewriter(String path) {
+	    int min = 1;
+	      int max = 10000;
 		try {
 			FileWriter writer = new FileWriter(path);
 			for (int i = 1; i <= 1000; i++) {
-				if (i % 2 == 0) {
-					int x = i * 10;
-					writer.write(x + "\n");
-				} else {
-					int y = 2 * i;
-					writer.write(y + "\n");
-				}
+				int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+					writer.write(random_int + "\n");
 			}
 			writer.close();
 		} catch (IOException ex1) {

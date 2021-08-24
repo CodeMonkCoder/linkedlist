@@ -24,7 +24,8 @@ public class tester {
 
 		// step 3
 		start = System.currentTimeMillis();
-		ll.sortList();
+		sorter test=new sorter();
+		test.quicksortlist(ll.gethead(),ll.gettail());
 		end = System.currentTimeMillis();
 		elapsedTime = end - start;
 		System.out.println("Time Taken in Step 3:" + elapsedTime + " ms");
@@ -34,6 +35,7 @@ public class tester {
 		obj.fileoutputwriter(output, ll.gethead());
 		end = System.currentTimeMillis();
 		elapsedTime = end - start;
+		System.out.println("Time Taken in Step 4:" + elapsedTime + " ms");
 	}
 
 }
